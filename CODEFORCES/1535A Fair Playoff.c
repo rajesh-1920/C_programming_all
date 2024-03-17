@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main(void)
+{
+    int i,t,s[4],temp;
+    scanf("%d",&t);
+    for(i=0; i<t; i++)
+    {
+        scanf("%d%d%d%d",&s[0],&s[1],&s[2],&s[3]);
+        if((s[0]>s[2]&&s[1]>s[3])||(s[0]>s[3]&&s[1]>s[2]))
+        {
+            temp=s[0];
+            s[0]=s[2];
+            s[2]=temp;
+            temp=s[1];
+            s[1]=s[3];
+            s[3]=temp;
+        }
+        if(s[0]>s[1])
+        {
+            temp=s[0];
+            s[0]=s[1];
+            s[1]=temp;
+        }
+        if(s[3]<s[2])
+        {
+            temp=s[2];
+            s[2]=s[3];
+            s[3]=temp;
+        }
+        if(s[1]>s[2])
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+    }
+}

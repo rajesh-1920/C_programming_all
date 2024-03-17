@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(void)
+{
+    int x[3],i,m,temp,d,h,j;
+    scanf("%d%d%d",&x[0],&x[1],&x[2]);
+    for(j=0;j<3;j++)
+    {
+        for(i=0;i<2;i++)
+    {
+        if(x[i]>x[i+1])
+        {
+            temp=x[i];
+            x[i]=x[i+1];
+            x[i+1]=temp;
+        }
+    }
+    }
+    d=x[2]-x[0];
+    if(d%2==0)
+    {
+        d=d/2+x[0];
+        h=d;
+        if(x[1]>h)
+        {
+            temp=h;
+            h=x[1];
+            x[1]=temp;
+        }
+        m=(d-x[0])+(h-x[1])+(x[2]-d);
+    }
+    printf("%d\n",m);
+}

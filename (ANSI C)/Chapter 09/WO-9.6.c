@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+    char string[]="CProgramming";
+    int c,d;
+    printf("\n-----------------\n");
+    for(c=0;c<12;c++)
+    {
+        d=c+1;
+        printf("%-12.*s\n",d,string);
+    }
+    for(c=11;c>=0;c--)
+    {
+        d=c+1;
+        printf("%-12.*s\n",d,string);
+    }
+    printf("\n-----------------\n");
+    printf("\n-----------------\n");
+    for(c=0;c<12;c++)
+    {
+        d=c+1;
+        printf("%12.*s\n",d,string);
+    }
+    for(c=11;c>=0;c--)
+    {
+        d=c+1;
+        printf("%12.*s\n",d,string);
+    }
+    printf("\n-----------------\n");
+    printf("\n-----------------\n");
+    for(c=0;c<12;c++)
+    {
+        d=c+1;
+        printf("%-1.*s\n",d,string);
+    }
+    for(c=11;c>=0;c--)
+    {
+        d=c+1;
+        printf("%-1.*s\n",d,string);
+    }
+    printf("\n-----------------\n");
+    printf("\n-----------------\n");
+    for(c=0;c<12;c++)
+    {
+        d=c+1;
+        printf("%*.1s\n",d,string);
+    }
+    for(c=11;c>=0;c--)
+    {
+        d=c+1;
+        printf("%*.1s\n",d,string);
+    }
+    printf("\n-----------------\n");
+}

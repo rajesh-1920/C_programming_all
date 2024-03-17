@@ -1,0 +1,72 @@
+#include<stdio.h>
+int main(void)
+{
+    int i,t,s[6],j;
+    char n[7];
+    scanf("%d",&t);
+    for(j=0; j<t; j++)
+    {
+        scanf("%s",n);
+        for(i=0;i<6;i++)
+        {
+            if(n[i]=='0')
+            {
+                s[i]=0;
+                continue;
+            }
+            if(n[i]=='1')
+            {
+                s[i]=1;
+                continue;
+            }
+            if(n[i]=='2')
+            {
+                s[i]=2;
+                continue;
+            }
+            if(n[i]=='3')
+            {
+                s[i]=3;
+                continue;
+            }
+            if(n[i]=='4')
+            {
+                s[i]=4;
+                continue;
+            }
+            if(n[i]=='5')
+            {
+                s[i]=5;
+                continue;
+            }
+            if(n[i]=='6')
+            {
+                s[i]=6;
+                continue;
+            }
+            if(n[i]=='7')
+            {
+                s[i]=7;
+                continue;
+            }
+            if(n[i]=='8')
+            {
+                s[i]=8;
+                continue;
+            }
+            if(n[i]=='9')
+            {
+                s[i]=9;
+                continue;
+            }
+        }
+        if(s[0]+s[1]+s[2]==s[3]+s[4]+s[5])
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+    }
+}

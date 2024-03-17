@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(void)
+{
+    long long int i,a,b,t,k,d,c;
+    scanf("%lld",&t);
+    for(k=0;k<t;k++)
+    {
+        c=0;
+        scanf("%lld%lld",&a,&b);
+        if(a>=b)
+        {
+            d=a-b;
+        }
+        else
+        {
+            d=b-a;
+        }
+       for(i=10;i>=1;i--)
+       {
+           c=c+d/i;
+           d=d%i;
+           if(d==0)
+           {
+               break;
+           }
+       }
+       printf("%lld\n",c);
+    }
+}

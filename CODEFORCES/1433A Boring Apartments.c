@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main(void)
+{
+    long int t,i,x,j,k,c,e,count;;
+    scanf("%ld",&t);
+    for(i=0;i<t;i++)
+    {
+        c=0;
+        scanf("%ld",&x);
+        e=x%10;
+        for(j=1;j<=e;j++)
+        {
+            k=j;
+            count=0;
+            while(1)
+            {
+                k=k*10+j;
+                count++;
+                if(count==1)
+                {
+                    c=c+1;
+                }
+                if(count==2)
+                {
+                    c=c+2;
+                }
+                if(count==3)
+                {
+                    c=c+3;
+                }
+                if(count==4)
+                {
+                    c=c+4;
+                }
+                if(count==4||((k-j)/10)==x)
+                {
+                    count=0;
+                    break;
+                }
+            }
+        }
+        printf("%ld\n",c);
+    }
+}

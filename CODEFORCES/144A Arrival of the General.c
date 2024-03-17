@@ -1,0 +1,56 @@
+#include<stdio.h>
+int main(void)
+{
+    int n,a[110],b[110],i,max,min,pmax,pmin,r;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        b[i]=a[i];
+    }
+    max=a[0];
+    min=b[n-1];
+    pmax=0;
+    pmin=n-1;
+    for(i=0;i<n;i++)
+    {
+        if(max==a[i])
+        {
+            continue;
+        }
+        if(max<a[i])
+        {
+            max=max+a[i];
+            a[i]=max-a[i];
+            max=max-a[i];
+            pmax=i;
+        }
+    }
+    for(i=n-1;i>=0;i--)
+    {
+        if(min==b[i])
+        {
+            continue;
+        }
+        if(min>b[i])
+        {
+            min=min+b[i];
+            b[i]=min-b[i];
+            min=min-b[i];
+            pmin=i;
+        }
+    }
+    if(pmin<pmax)
+    {
+        r=pmax+(n-pmin)-2;
+    }
+    else if(pmin>pmax)
+    {
+        r=pmax+(n-pmin)-1;
+    }
+    else
+    {
+        r=0;
+    }
+    printf("%d\n",r);
+}
